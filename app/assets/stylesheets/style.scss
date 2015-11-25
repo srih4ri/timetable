@@ -45,4 +45,8 @@
 	#subscribe:hover{
 		  background: #d45d7d;
 	}
+	
+	.field_with_errors input{
+		border: 1px solid red;
+	}
 }

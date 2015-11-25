@@ -13,10 +13,18 @@ class PagesController < ApplicationController
   end
 
   def teaser
+    @newsletter_subscription = NewsletterSubscription.new
     render 'teaser', layout: 'public'
   end
   
   def subscribe_newsletter
-    render 'newsletter', layout: 'public'
+    @email = params[:newsletter_subscription][:email]
+    @newsletter_subscription = NewsletterSubscription.new
+    @newsletter_subscription.email= @email
+    if @newsletter_subscription.save
+      render 'newsletter', layout: 'public'
+    else 
+      render 'teaser', layout: 'public'
+    end
   end
 end
