@@ -1,0 +1,60 @@
+/* line 1, /home/shaheen/wheel/app/assets/stylesheets/style.scss */
+.subscribePlate {
+  width: 500px;
+  margin: 17% auto;
+}
+/* line 4, /home/shaheen/wheel/app/assets/stylesheets/style.scss */
+.subscribePlate .subHead {
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #fff;
+}
+/* line 10, /home/shaheen/wheel/app/assets/stylesheets/style.scss */
+.subscribePlate .subDesc {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  margin: -2px 0 25px;
+}
+/* line 16, /home/shaheen/wheel/app/assets/stylesheets/style.scss */
+.subscribePlate .subForm {
+  display: flex;
+  align-items: center;
+}
+/* line 20, /home/shaheen/wheel/app/assets/stylesheets/style.scss */
+.subscribePlate .subButton {
+  height: 44px;
+  border: none;
+}
+/* line 24, /home/shaheen/wheel/app/assets/stylesheets/style.scss */
+.subscribePlate .email {
+  width: 75%;
+  background: #FDFCFB;
+  font-family: inherit;
+  color: #737373;
+  letter-spacing: 1px;
+  text-indent: 5%;
+  border-radius: 5px 0 0 5px;
+}
+/* line 33, /home/shaheen/wheel/app/assets/stylesheets/style.scss */
+.subscribePlate .subscribe {
+  width: 25%;
+  height: 46px;
+  background: #E86C8D;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  letter-spacing: 1px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+/* line 45, /home/shaheen/wheel/app/assets/stylesheets/style.scss */
+.subscribePlate #subscribe:hover {
+  background: #d45d7d;
+}
+/* line 49, /home/shaheen/wheel/app/assets/stylesheets/style.scss */
+.subscribePlate .field_with_errors input {
+  border: 1px solid red;
+}
