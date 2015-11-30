@@ -12,4 +12,11 @@ class PagesController < ApplicationController
     render
   end
 
+  def teaser
+    render 'teaser', layout: 'public'
+  end
+  
+  def subscribe_newsletter
+    render 'newsletter', layout: 'public'
+  end
 end

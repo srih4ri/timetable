@@ -45,7 +45,8 @@ Timetable::Application.routes.draw do
 
   unauthenticated do
     as :user do
-      root :to => 'devise/sessions#new', as: :unauthenticated_root
+      root :to => "pages#teaser", as: :teaser_page
+      post 'pages/newsletter' => "pages#subscribe_newsletter", as: :subscribe_newsletter 
     end
   end
 
