@@ -38,8 +38,6 @@ gem 'daemons'
 # collection of handy tools
 gem 'handy'
 
-# for error tracking
-
 # use bootstrap3
 gem 'bootstrap-sass', '~> 3.3.3'
 
@@ -114,3 +112,4 @@ end
 
 # Attach comments to Active Record queries
 gem 'marginalia'
+
