@@ -40,7 +40,6 @@ gem 'handy'
 
 # for error tracking
 
-
 # use bootstrap3
 gem 'bootstrap-sass', '~> 3.3.3'
 
@@ -51,7 +50,7 @@ gem 'font-awesome-sass', '~> 4.3.0'
 gem 'simple_form'
 
 # admin framework
-
+gem 'activeadmin', github: 'activeadmin'
 
 # for handling file uploads
 gem 'carrierwave'
@@ -115,4 +114,3 @@ end
 
 # Attach comments to Active Record queries
 gem 'marginalia'
-
