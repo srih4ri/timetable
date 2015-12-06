@@ -7,6 +7,5 @@
         %p Enter your email for receiving updates about timetable's progress
         = form_for @newsletter_subscription, url: subscribe_newsletter_path, html: { class: 'subForm' } do |f|
           .form-controls
-          = f.email_field :email, :required => "true", class: 'subButton email', :placeholder => "sam@sample.com"
+          = f.email_field :email, class: 'subButton email', :placeholder => "sam@sample.com"
           = f.submit 'Send message', class: "subButton subscribe"
-    
