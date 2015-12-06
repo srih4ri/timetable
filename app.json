@@ -2,7 +2,7 @@
   "name": "timetable",
   "description": "Time table app",
   "scripts": {
-    "postdeploy": "bundle exec rake db:migrate"
+    "postdeploy": "bundle exec rake db:migrate db:seed"
   },
   "env": {
     "AWS_ACCESS_KEY_ID": {
