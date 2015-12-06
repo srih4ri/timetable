@@ -39,7 +39,7 @@ gem 'daemons'
 gem 'handy'
 
 # for error tracking
-gem 'honeybadger'
+
 
 # use bootstrap3
 gem 'bootstrap-sass', '~> 3.3.3'
@@ -51,7 +51,7 @@ gem 'font-awesome-sass', '~> 4.3.0'
 gem 'simple_form'
 
 # admin framework
-gem 'activeadmin', github: 'activeadmin'
+
 
 # for handling file uploads
 gem 'carrierwave'
