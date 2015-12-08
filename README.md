@@ -1,1 +1,3 @@
 # timetable
+
+- See #ThingsAndRules.md .
