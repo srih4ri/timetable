@@ -1,0 +1,3 @@
+class Teacher < Thing
+
+end

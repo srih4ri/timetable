@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125083649) do
+ActiveRecord::Schema.define(version: 20151209201856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -53,6 +54,35 @@ ActiveRecord::Schema.define(version: 20151125083649) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "things", force: :cascade do |t|
+    t.string   "type"
+    t.hstore   "attrs"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "timetable_entries", force: :cascade do |t|
+    t.text     "teacher_ids",  default: [],              array: true
+    t.integer  "classroom_id"
+    t.integer  "period_id"
+    t.integer  "subject_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "timetable_entries", ["classroom_id"], name: "index_timetable_entries_on_classroom_id", using: :btree
+  add_index "timetable_entries", ["period_id"], name: "index_timetable_entries_on_period_id", using: :btree
+  add_index "timetable_entries", ["subject_id"], name: "index_timetable_entries_on_subject_id", using: :btree
+
+  create_table "timetable_sheets", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "timetable_sheets", ["user_id"], name: "index_timetable_sheets_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",         null: false
     t.string   "encrypted_password",     default: "",         null: false
@@ -76,4 +106,5 @@ ActiveRecord::Schema.define(version: 20151125083649) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "timetable_sheets", "users"
 end
