@@ -1,12 +1,12 @@
-##Timetable
+## Timetable
 
-##Schedule : One Full Timetable Sheet.
+## Schedule : One Full Timetable Sheet.
 
 * -> creator(one) The one who created it.
 * -  name(string) name: One friendly name to call.
 * => events/timetableEntries : All the events that are on the schedule/All periods in one timetable sheet.
 
-##event/timetableEntry : One entry in the sheet.
+## event/timetableEntry : One entry in the sheet.
 
 *  => organizers/teachers - [ Set of people cordinating this event / Teachers taking the class ](##Teacher)
 *  => location/classroom - [ Location where the event is held/ ClassoRoom - Class and Division]
@@ -14,32 +14,32 @@
 *  => topic/subject - [ Topic of the event /  Subject ]
 
 
-##Thing
+## Thing
 
 * Attributes (Attributes of a thing, Arbitary Key value pairs)
 
 
-##Organizer/Teacher < Thing
+## Organizer/Teacher < Thing
 Required Attributes : 
 
  * String Name (Teacher's Name)
  * Array Topics/Subjects (Topics the Organizer can handle/Subjects that can be taught by this teacher)
 
-##Location/ClassoRoom < Thing
+## Location/ClassoRoom < Thing
 Required Attributes:
 
   * String Name (5C)
   * String Standard (5)
   * String Division
 
-##TimeSlot/Period < Thing
+## TimeSlot/Period < Thing
 Required Attributes:
 
   * Time StartTime(HH:MM:SS)
   * Time EndTime(HH:MM:SS)
   * Integer DayOfTheWeek({0 - No of days in week})
 
-##Topic/Subject
+## Topic/Subject
 Required Attributes:
 
    * String Name
@@ -48,7 +48,7 @@ Required Attributes:
 
 ---
 
-#Notes:
+# Notes:
 
 - One time table entry has multiple teachers?
 Eg: Labs have multiple teachers
